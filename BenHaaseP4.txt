@@ -1,0 +1,13 @@
+My algorithm uses iterative deepening to search until t-1.
+When the time limit is reached, it returns either the previous
+best searches move, or the best move from the heuristic function
+if no threats are present. If a full iteration completes and the 
+time limit has not been reached, the search is repeated with max
+depth + 1.  My heuristic funtion is fairly simply, but effective.
+It determines the value for all possible moves based on how many
+possible wins could be made involving that location taking into
+account enemy pieces blocking off locations.  This heavily weights
+it toward the center columns until they are filled, and achieves
+wins a majority of the time.  This heuristic favors a win later in
+the game as it tends to build upward due to more open moves residing
+at the top of the board.
